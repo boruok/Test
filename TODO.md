@@ -1,0 +1,5 @@
+- [ ] fix positioning player indoor/outdoor
+- [ ] fix dropped items doesn't saved in world
+- [ ] fix possible double level-scene in world
+- [ ] implement teleport potion
+- [ ] refactor play.gd

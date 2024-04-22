@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://yj4ct8lt7413"]
+
+[node name="Base" type="TileMap" groups=["tilemap"]]
+y_sort_enabled = true
+format = 2
+layer_0/name = "floor"
+layer_0/y_sort_enabled = true
+layer_1/name = "wall"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "furniture"
+layer_2/y_sort_enabled = true
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "ceiling"
+layer_3/y_sort_enabled = true
+layer_3/z_index = 2
+layer_3/tile_data = PackedInt32Array()

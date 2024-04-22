@@ -1,0 +1,158 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1d3y65361k2m"]
+
+[ext_resource type="PackedScene" uid="uid://domdxxbmag3w4" path="res://scenes/ui/popup.tscn" id="1_5i7qn"]
+[ext_resource type="Script" path="res://scenes/ui/inventory.gd" id="2_8lkqq"]
+
+[node name="Inventory" instance=ExtResource("1_5i7qn")]
+script = ExtResource("2_8lkqq")
+
+[node name="s" type="Panel" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="s" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="GridContainer" parent="s/VBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 7
+
+[node name="Button" type="Button" parent="s/VBoxContainer/ItemList" index="0"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="s/VBoxContainer/ItemList" index="1"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="s/VBoxContainer/ItemList" index="2"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="s/VBoxContainer/ItemList" index="3"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="s/VBoxContainer/ItemList" index="4"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="s/VBoxContainer/ItemList" index="5"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="s/VBoxContainer/ItemList" index="6"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="s/VBoxContainer/ItemList" index="7"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="s/VBoxContainer/ItemList" index="8"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="s/VBoxContainer/ItemList" index="9"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button11" type="Button" parent="s/VBoxContainer/ItemList" index="10"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button12" type="Button" parent="s/VBoxContainer/ItemList" index="11"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button13" type="Button" parent="s/VBoxContainer/ItemList" index="12"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button14" type="Button" parent="s/VBoxContainer/ItemList" index="13"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button15" type="Button" parent="s/VBoxContainer/ItemList" index="14"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button16" type="Button" parent="s/VBoxContainer/ItemList" index="15"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button17" type="Button" parent="s/VBoxContainer/ItemList" index="16"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button18" type="Button" parent="s/VBoxContainer/ItemList" index="17"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button19" type="Button" parent="s/VBoxContainer/ItemList" index="18"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button20" type="Button" parent="s/VBoxContainer/ItemList" index="19"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="Button21" type="Button" parent="s/VBoxContainer/ItemList" index="20"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="s/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="s/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="s/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Название"
+
+[node name="Info" type="Label" parent="s/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "Описание"
+autowrap_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="s/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Use" type="Button" parent="s/VBoxContainer/HBoxContainer/VBoxContainer2" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+disabled = true
+text = "Использовать"
+
+[node name="Drop" type="Button" parent="s/VBoxContainer/HBoxContainer/VBoxContainer2" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+disabled = true
+text = "Выбросить"

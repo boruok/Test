@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmub3isl1mlab"]
+
+[ext_resource type="PackedScene" uid="uid://gnwiwha0d3tq" path="res://scenes/pickups/base.tscn" id="1_0hwp1"]
+[ext_resource type="Texture2D" uid="uid://bpwxt5eb8b07x" path="res://scenes/pickups/token.png" id="2_6ferl"]
+[ext_resource type="Script" path="res://scenes/pickups/token.gd" id="2_71nti"]
+
+[node name="Token" instance=ExtResource("1_0hwp1")]
+script = ExtResource("2_71nti")
+depletable = false
+text = "Жетон"
+info = "Круглый кусок металла с числом 14. Нельзя использовать."
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_6ferl")

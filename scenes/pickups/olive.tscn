@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://3llancgrex80"]
+
+[ext_resource type="PackedScene" uid="uid://gnwiwha0d3tq" path="res://scenes/pickups/base.tscn" id="1_uehoa"]
+[ext_resource type="Script" path="res://scenes/pickups/olive.gd" id="2_h3fdm"]
+[ext_resource type="Texture2D" uid="uid://d0m7e8m638dif" path="res://scenes/pickups/olive.png" id="2_omlur"]
+
+[node name="Olive" instance=ExtResource("1_uehoa")]
+script = ExtResource("2_h3fdm")
+text = "Оливки"
+info = "Уменьшает максимальное здоровье пользователя на 10."
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_omlur")

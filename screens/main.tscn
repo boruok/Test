@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfdalap2g3hf4"]
+
+[ext_resource type="PackedScene" uid="uid://drviwa2nmgbni" path="res://scenes/actor/player/player.tscn" id="1_kaxji"]
+[ext_resource type="PackedScene" uid="uid://elebxvkypkiw" path="res://scenes/levels/street.tscn" id="2_kg4f4"]
+[ext_resource type="PackedScene" uid="uid://ch0arnrpg06ek" path="res://scenes/ui/play.tscn" id="3_h1he4"]
+[ext_resource type="PackedScene" uid="uid://c1fwkhyojnhxn" path="res://scenes/ui/confirm.tscn" id="5_shv22"]
+[ext_resource type="PackedScene" uid="uid://d1d3y65361k2m" path="res://scenes/ui/inventory.tscn" id="6_qgied"]
+
+[node name="Main" type="Node"]
+
+[node name="World" type="Node2D" parent="."]
+process_mode = 1
+y_sort_enabled = true
+
+[node name="Street" parent="World" instance=ExtResource("2_kg4f4")]
+layer_2/name = "ceiling"
+layer_2/z_index = 2
+
+[node name="Player" parent="World" instance=ExtResource("1_kaxji")]
+position = Vector2(88, 91)
+
+[node name="UI" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Play" parent="UI" node_paths=PackedStringArray("_player", "_world") instance=ExtResource("3_h1he4")]
+_confirm_scene = ExtResource("5_shv22")
+_inventory_scene = ExtResource("6_qgied")
+_player = NodePath("../../World/Player")
+_world = NodePath("../../World")

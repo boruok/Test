@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://byd177iqtbk2p"]
+
+[ext_resource type="Script" path="res://scenes/actor/base.gd" id="1_7mvgp"]
+
+[node name="Base" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_7mvgp")
+_velocity_max = Vector2(24, 24)
+_accel = 1
+_decel = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

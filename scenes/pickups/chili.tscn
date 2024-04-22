@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://1kdi3cp5d5j7"]
+
+[ext_resource type="PackedScene" uid="uid://gnwiwha0d3tq" path="res://scenes/pickups/base.tscn" id="1_3qhpn"]
+[ext_resource type="Texture2D" uid="uid://dklqt2x78e7w8" path="res://scenes/pickups/chili.png" id="2_tfsbk"]
+[ext_resource type="Script" path="res://scenes/pickups/chili.gd" id="2_vml6t"]
+
+[node name="Chili" instance=ExtResource("1_3qhpn")]
+script = ExtResource("2_vml6t")
+text = "Перец чили"
+info = "Уменьшает здоровье пользователя на 1."
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_tfsbk")

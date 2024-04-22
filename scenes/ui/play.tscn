@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch0arnrpg06ek"]
+
+[ext_resource type="PackedScene" uid="uid://b3pnnme32oh3o" path="res://scenes/ui/base.tscn" id="1_dek62"]
+[ext_resource type="Script" path="res://scenes/ui/play.gd" id="2_t4pcr"]
+
+[sub_resource type="GDScript" id="GDScript_vkk4l"]
+script/source = "extends Panel
+
+@export var _dialogue_timeout := 2.0
+var _time := 0.0
+var text : String:
+	set(value):
+		text = value
+		_time = 0.0
+		visible = true
+		set_process(true)
+		$Label.text = value
+
+
+func _ready() -> void:
+	set_process(false)
+
+
+func _process(delta: float) -> void:
+	_time += delta
+	if _time > _dialogue_timeout:
+		_time = 0.0
+		set_process(false)
+		visible = false
+"
+
+[node name="Play" instance=ExtResource("1_dek62")]
+script = ExtResource("2_t4pcr")
+_confirm_scene = null
+_inventory_scene = null
+
+[node name="Panel" type="Panel" parent="." index="0"]
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 33.0
+offset_bottom = 22.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="HP" type="Label" parent="Panel/VBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "HP 10/10"
+
+[node name="Keys" type="Label" parent="Panel/VBoxContainer" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "Ключи: 0"
+
+[node name="Dialogue" type="Panel" parent="." index="1"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -28.0
+offset_right = 96.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+script = SubResource("GDScript_vkk4l")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Dialogue" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Lorem ipsum"
+horizontal_alignment = 1
+vertical_alignment = 1

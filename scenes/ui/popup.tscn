@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://domdxxbmag3w4"]
+
+[ext_resource type="PackedScene" uid="uid://b3pnnme32oh3o" path="res://scenes/ui/base.tscn" id="1_yoifl"]
+[ext_resource type="Script" path="res://scenes/ui/popup.gd" id="2_o4jb4"]
+
+[node name="Popup" instance=ExtResource("1_yoifl")]
+script = ExtResource("2_o4jb4")

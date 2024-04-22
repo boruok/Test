@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1fwkhyojnhxn"]
+
+[ext_resource type="PackedScene" uid="uid://domdxxbmag3w4" path="res://scenes/ui/popup.tscn" id="1_v4ebw"]
+[ext_resource type="Script" path="res://scenes/ui/confirm.gd" id="2_r83n2"]
+
+[node name="Confirm" instance=ExtResource("1_v4ebw")]
+script = ExtResource("2_r83n2")
+
+[node name="Panel" type="Panel" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 8
+text = "Вы хотите потратить 1 ключ и открыть дверь?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Cancel" type="Button" parent="Panel/VBoxContainer/HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+text = "Нет"
+
+[node name="OK" type="Button" parent="Panel/VBoxContainer/HBoxContainer" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+text = "Да"
